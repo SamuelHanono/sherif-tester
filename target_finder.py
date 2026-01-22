@@ -1,8 +1,18 @@
 # Goal: Find a target number inside a list
 
 def find_index(nums, target):
-    # O(log n) Binary Search approach:
-    # We repeatedly cut the search space in half until we find the target.
+    """
+    Find the index of a target value in a sorted list using binary search.
+
+    Args:
+        nums: A sorted list of comparable elements.
+        target: The value to search for.
+
+    Returns:
+        The index of target if found, otherwise -1.
+
+    Time Complexity: O(log n)
+    """
     left = 0
     right = len(nums) - 1
 
@@ -17,11 +27,11 @@ def find_index(nums, target):
 
         # If target is bigger, search the right half
         elif nums[mid] < target:
-            left += 1
+            left = mid + 1
 
         # If target is smaller, search the left half
         else:
-            right -= 1
+            right = mid - 1
 
     # If we finish without finding it, return -1
     return -1

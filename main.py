@@ -2,7 +2,7 @@
 
 def printer():
     arr = []
-    for i in range(11):
+    for i in range(1, 11):
         arr.append(i)
     return arr
 

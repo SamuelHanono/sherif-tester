@@ -5,5 +5,12 @@ def printer():
     for i in range(11):
         arr.append(i)
     return arr
+    
+def printerNeg():
+    arr = []
+    for i in range(11):
+        arr.append(-i)
+    return arr
 
 print(printer())
+print(printerNeg())

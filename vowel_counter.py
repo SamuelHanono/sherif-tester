@@ -9,16 +9,16 @@ def count_vowels(text):
     count = 0
 
     # Loop through every character in the text
-    for ch in text  # ERROR 1: missing ":" at the end of the for-loop line
+    for ch in text:
         # Make the character lowercase so 'A' counts like 'a'
-        ch = ch.lowercase()  # ERROR 2: .lowercase() doesn't exist in Python (should be .lower())
+        ch = ch.lower()
 
         # If the character is a vowel, add 1 to the count
-        if ch in vowel:  # ERROR 3: "vowel" variable doesn't exist (should be "vowels")
+        if ch in vowels:
             count += 1
 
     # Return the final count
-    return counts  # ERROR 4: "counts" variable doesn't exist (should be "count")
+    return count
 
 
 # Ask the user for a sentence
